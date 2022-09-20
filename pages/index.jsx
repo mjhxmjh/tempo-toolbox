@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import TempoDisplay from '../components/TempoDisplay';
-import App from './App';
+import App from '../components/App';
 
 export default function Home() {
   return (
