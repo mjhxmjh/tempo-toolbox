@@ -1,5 +1,8 @@
-import TempoDisplay from './TempoDisplay';
+import TempoDisplay from "./TempoDisplay";
+import { useState } from "react";
 
 export default function App() {
-  return <TempoDisplay tempo={96} />;
+  const [tempo, setTempo] = useState(96);
+
+  return <TempoDisplay tempo={tempo} />;
 }
