@@ -1,3 +1,3 @@
 export default function Header() {
-  return <h1 className="text-3xl font-bold">Tempo Toolbox</h1>;
+  return <h1 className="text-1xl italic font-bold p-4 uppercase border-b">Tempo Toolbox</h1>;
 }

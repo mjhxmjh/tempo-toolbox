@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import TempoDisplay from '../components/TempoDisplay';
+import App from './App';
 
 export default function Home() {
   return (
@@ -10,9 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+      <main className="flex w-full flex-1 flex-col items-center px-20 text-center">
         <Header />
-        <TempoDisplay tempo={50} />
+        <App />
       </main>
 
       <footer className="flex h-24 w-full items-center justify-center border-t">
