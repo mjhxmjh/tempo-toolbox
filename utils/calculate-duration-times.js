@@ -26,6 +26,6 @@ const delayValues = [
 
 */
 
-function calculateDelayTimes() {}
+function calculateDurationTimes() {}
 
-module.exports = calculateDelayTimes;
+module.exports = calculateDurationTimes;
