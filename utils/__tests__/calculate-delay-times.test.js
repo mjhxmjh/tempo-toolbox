@@ -9,4 +9,8 @@ describe("calculate delay times", () => {
     const bpm = 120;
     expect(calculateDelayTimes(bpm)).toBe(500);
   });
+  test("At 85bpm (results in floating point number) the function should return the note length of one beat in milliseconds rounded to two decimal places", () => {
+    const bpm = 85;
+    expect(calculateDelayTimes(bpm)).toBe(705.88);
+  });
 });
