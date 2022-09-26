@@ -1,4 +1,4 @@
-const calculateDelayTimes = require('../calculate-delay-times');
+const calculateDurationTimes = require('../calculate-duration-times');
 // TEST IDEAS
 // function returns an array of objects
 // function returns delay times fixed to nearest decimal place e.g. 312.518 => 312.52
