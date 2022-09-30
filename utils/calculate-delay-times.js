@@ -5,9 +5,15 @@
 // 1/16 = semiquaver, sixteenth = 0.25
 // 1/32 = demisemiquaver, thirtysecond = 0.125
 
-function calculateDelayTimes(bpm, numOfBeats = 1) {
-  const lengthOfNote = (60 / bpm) * 1000;
-  return Number((lengthOfNote * numOfBeats).toFixed(2));
+function calculateDelayTimes(bpm, beatsArray) {
+  const durationsArray = [];
+  const lengthOfOneBeat = (60 / bpm) * 1000;
+
+  for (let i = 0; i < beatsArray.length; i++) {
+    durationsArray.push(Number((lengthOfOneBeat * beatsArray[i]).toFixed(2)));
+  }
+  console.log(durationsArray);
+  return durationsArray;
 }
 
 module.exports = calculateDelayTimes;
