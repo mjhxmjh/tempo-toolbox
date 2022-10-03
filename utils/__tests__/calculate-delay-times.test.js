@@ -1,6 +1,6 @@
 const calculateDelayTimes = require('../calculate-delay-times/calculate-delay-times');
 
-describe('Calculate Delay Times', () => {
+describe('Calculating delay times', () => {
   test('should return correct values for basic notes', () => {
     const bpm = 60;
     const noteValues = [2, 1, 0.5, 0.25, 0.125];
@@ -32,5 +32,14 @@ describe('Calculate Delay Times', () => {
     expect(calculateDelayTimes(bpm, noteValues)).toEqual(
       noteValuesConvertedToMs
     );
+  });
+});
+
+describe('Edge cases', () => {
+  test('should not mutate the input array', () => {
+    const bpm = 60;
+    const noteValues = [2, 1];
+    calculateDelayTimes(bpm, noteValues);
+    expect(noteValues).toEqual(noteValues);
   });
 });
