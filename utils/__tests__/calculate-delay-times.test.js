@@ -10,6 +10,15 @@ describe('Calculate Delay Times', () => {
       noteValuesConvertedToMs
     );
   });
+
+  test('should return correct values for dotted notes', () => {
+    const bpm = 60;
+    const noteValues = [3, 1.5, 0.75];
+    const noteValuesConvertedToMs = [3000, 1500, 750];
+    expect(calculateDelayTimes(bpm, noteValues)).toEqual(
+      noteValuesConvertedToMs
+    );
+  });
 });
 
 // describe('calculate delay times', () => {
