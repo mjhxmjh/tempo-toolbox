@@ -12,9 +12,24 @@ describe('Calculate Delay Times', () => {
   });
 
   test('should return correct values for dotted notes', () => {
-    const bpm = 60;
+    const bpm = 120;
     const noteValues = [3, 1.5, 0.75];
-    const noteValuesConvertedToMs = [3000, 1500, 750];
+    const noteValuesConvertedToMs = [1500, 750, 375];
+    expect(calculateDelayTimes(bpm, noteValues)).toEqual(
+      noteValuesConvertedToMs
+    );
+  });
+
+  test('should return correct values for triplet notes', () => {
+    const bpm = 96;
+
+    const crotchetTriplet = 2 / 3;
+    const quaverTriplet = 1 / 3;
+    const semiquaverTriplet = 1 / 6;
+
+    const noteValues = [crotchetTriplet, quaverTriplet, semiquaverTriplet];
+    const noteValuesConvertedToMs = [416.67, 208.33, 104.17];
+
     expect(calculateDelayTimes(bpm, noteValues)).toEqual(
       noteValuesConvertedToMs
     );
