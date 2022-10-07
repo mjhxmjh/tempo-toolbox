@@ -1,9 +1,14 @@
-// 1/1 = semibreve, whole = 4
-// 1/2 = minum, half = 2
-// 1/4 = crotchet, quarter = 1
-// 1/8 = quaver, eigth = 0.5
-// 1/16 = semiquaver, sixteenth = 0.25
-// 1/32 = demisemiquaver, thirtysecond = 0.125
+/*
+
+Given an array of note values and BPM, this function should calculate the time in milliseconds of each note.
+
+It should return an array of numbers, each rounded up to two decimal places.
+
+The note values are expressed in beats. Please see notes details.
+
+e.g. calculateDelayTimes(120, [1, 0.5]) => [500, 250]
+
+*/
 
 function calculateDelayTimes(bpm, beatsArray) {
   const durationsArray = [];
@@ -12,7 +17,6 @@ function calculateDelayTimes(bpm, beatsArray) {
   for (let i = 0; i < beatsArray.length; i++) {
     durationsArray.push(Number((lengthOfOneBeat * beatsArray[i]).toFixed(2)));
   }
-  console.log(durationsArray);
   return durationsArray;
 }
 
