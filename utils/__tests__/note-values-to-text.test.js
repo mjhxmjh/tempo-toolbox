@@ -9,10 +9,14 @@ describe('note values to text', () => {
     const input = [1];
     expect(noteValuesToText(input)).toEqual(['1/4']);
   });
-  test('should convert multiple values to text', () => {
-    const input = [2, 1, 0.5, 0.25, 0.125];
-    const convertedValues = ['1/2', '1/4', '1/8', '1/16', '1/32'];
-
+  test('should convert multiple simple values to text', () => {
+    const input = [4, 2, 1, 0.5, 0.25, 0.125];
+    const convertedValues = ['1 bar', '1/2', '1/4', '1/8', '1/16', '1/32'];
+    expect(noteValuesToText(input)).toEqual(convertedValues);
+  });
+  test('should convert dotted values', () => {
+    const input = [3, 1.5, 0.75];
+    const convertedValues = ['1/2d', '1/4d', '1/8d'];
     expect(noteValuesToText(input)).toEqual(convertedValues);
   });
 });

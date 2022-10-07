@@ -4,6 +4,13 @@
 > A beat is something we can use to relate to. Note values can be thought of in terms of beats.
 > For example, a 'crotchet' is held for one beat and there are usually four beats to a bar, so a crotchet is also a 1/4
 
+### Note Values to Text
+
+loop over array
+do some maths on a number
+push the result as a string literal into array
+.push(`1/`${})
+
 ### Building Data Structure
 
 // This function calculates the length of note values (in milliseconds) and frequency (in Hz) based on the bpm.
