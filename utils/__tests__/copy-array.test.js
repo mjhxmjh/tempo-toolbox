@@ -1,3 +1,7 @@
-const copyArray = require('../copy-array');
+const copyArray = require('../copy-array/copy-array');
 
-describe('Copy Array', () => {});
+describe('Copy Array', () => {
+  test('should return an empty array given empty array input', () => {
+    expect(copyArray([])).toEqual([]);
+  });
+});
