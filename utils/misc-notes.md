@@ -16,7 +16,7 @@ During first attempt, things got nasty with large switch statements, regex and t
 'copying the array' is the key here! A quick browse online, came to find `Array.from()` method. Whilst copying the array values it can also take a function as it's second argument to run on each element.
 
 Introducing...
-`copyArray`, taking `beatToNote` function
+`copyArray`, taking `beatValueToNote` function
 
 ### Building Data Structure
 
