@@ -18,4 +18,27 @@ describe('CopyArray using beatValueToNote function', () => {
     const noteValues = ['1/4t', '1/8t', '1/16t'];
     expect(copyArray(beatValues, beatValueToNote)).toEqual(noteValues);
   });
+  test('should convert mixed order beat values', () => {
+    // first and last two are switched around
+    const beatValues = [
+      3, 4, 2, 1.5, 1, 0.66666666666, 0.75, 0.5, 0.33333333333, 0.375, 0.25,
+      0.125, 0.16666666666,
+    ];
+    const noteValues = [
+      '1/2d',
+      '1 bar',
+      '1/2',
+      '1/4d',
+      '1/4',
+      '1/4t',
+      '1/8d',
+      '1/8',
+      '1/8t',
+      '1/16d',
+      '1/16',
+      '1/32',
+      '1/16t',
+    ];
+    expect(copyArray(beatValues, beatValueToNote)).toEqual(noteValues);
+  });
 });
