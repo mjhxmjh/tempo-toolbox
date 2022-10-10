@@ -8,4 +8,9 @@ describe('Beat Value To Note function', () => {
 
     expect(copyArray(beatValues, beatValueToNote)).toEqual(noteValues);
   });
+  test('should convert dotted beat values', () => {
+    const beatValues = [3, 1.5, 0.75, 0.375];
+    const noteValues = ['1/2d', '1/4d', '1/8d', '1/16d'];
+    expect(copyArray(beatValues, beatValueToNote)).toEqual(noteValues);
+  });
 });
