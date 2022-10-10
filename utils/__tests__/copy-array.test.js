@@ -17,3 +17,12 @@ describe('Copy Array', () => {
     expect(copyArray(array, numToStrFunc)).toEqual(newArray);
   });
 });
+
+describe('Further tests', () => {
+  test('should not mutate original array', () => {
+    const array = [2, 10, 55];
+    const simpleFunc = (num) => num * 2;
+    copyArray(array, simpleFunc);
+    expect(array).toEqual(array);
+  });
+});
