@@ -10,4 +10,10 @@ describe('Copy Array', () => {
     const newArray = [4, 20, 110];
     expect(copyArray(array, simpleFunc)).toEqual(newArray);
   });
+  test('can run a simple number to string converter', () => {
+    const array = [1, 2, 3];
+    const numToStrFunc = (num) => num.toString();
+    const newArray = ['1', '2', '3'];
+    expect(copyArray(array, numToStrFunc)).toEqual(newArray);
+  });
 });
