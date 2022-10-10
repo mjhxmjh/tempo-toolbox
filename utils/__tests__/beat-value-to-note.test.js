@@ -14,8 +14,8 @@ describe('CopyArray using beatValueToNote function', () => {
     expect(copyArray(beatValues, beatValueToNote)).toEqual(noteValues);
   });
   test('should convert triplet beat values', () => {
-    const beats = [0.66666666, 0.333333, 0.166666];
+    const beatValues = [0.66666666, 0.333333, 0.166666];
     const noteValues = ['1/4t', '1/8t', '1/16t'];
-    expect(copyArray(beats, beatToNote)).toEqual(noteValues);
+    expect(copyArray(beatValues, beatValueToNote)).toEqual(noteValues);
   });
 });
