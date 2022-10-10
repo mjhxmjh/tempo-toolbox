@@ -1,4 +1,5 @@
 function beatValueToNote(n) {
+  if (n === 4) return '1 bar';
   const simpleBeatValues = [4, 2, 1, 0.5, 0.25, 0.125];
   const dottedBeatValues = [3, 1.5, 0.75, 0.375];
   const isTriplet = /\d\.6+\d*|\d\.3+\d*|\d\.16+\d*/.test(n.toString());
