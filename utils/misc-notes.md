@@ -11,6 +11,13 @@ do some maths on a number
 push the result as a string literal into array
 .push(`1/`${})
 
+During first attempt, things got nasty with large switch statements, regex and trouble copying the array.
+
+'copying the array' is the key here! A quick browse online, came to find `Array.from()` method. Whilst copying the array values it can also take a function as it's second argument to run on each element.
+
+Introducing...
+`copyArray`, taking `beatValueToNote` function
+
 ### Building Data Structure
 
 // This function calculates the length of note values (in milliseconds) and frequency (in Hz) based on the bpm.
