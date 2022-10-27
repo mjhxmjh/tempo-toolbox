@@ -41,13 +41,13 @@ describe('function should return an array', () => {
     // Remind ourselves of the flow, check the "function-flow-diagram"
 
     test('should check for matched properties', () => {
+      const bpm = 123;
+      const beatValues = [1, 2, 1, 0.5, 0.25, 0.125];
+
       // 1. Take the beat values and convert them to note values
-      const beatValues = [4, 2, 1, 0.5, 0.25, 0.125];
       const noteValues = Array.from(beatValues, beatValueToNote);
-      // console.log(beatValues, noteValues);
 
       // 2. Take the beat values and BPM, convert them into delay times (i.e. duration)
-      const bpm = 120;
       const delayTimesInMs = calculateDelayTimes(bpm, beatValues);
       // console.log(noteValues, delayTimesInMs);
 
@@ -69,5 +69,7 @@ describe('function should return an array', () => {
         );
       });
     });
+
+    // number of key-value pairs in object matches length of 1st input array
   });
 });

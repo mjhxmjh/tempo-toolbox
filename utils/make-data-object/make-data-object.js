@@ -1,13 +1,13 @@
-function makeDataObject(keys, values, durations) {
+function makeDataObject(keys, keyOneValues, keyTwoValues) {
   if (!keys.length) {
     return [];
   }
   const arr = [];
 
-  for (let i = 0; i < values.length; i++) {
+  for (let i = 0; i < keyOneValues.length; i++) {
     const dataObject = {};
-    dataObject[keys[0]] = values[i];
-    if (durations) dataObject[keys[1]] = durations[i];
+    dataObject[keys[0]] = keyOneValues[i];
+    if (keyTwoValues) dataObject[keys[1]] = keyTwoValues[i];
     arr.push(dataObject);
   }
   return arr;
